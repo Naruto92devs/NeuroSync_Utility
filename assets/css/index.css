@@ -16,7 +16,6 @@ html {
     font-weight: 400;
     font-style: normal;
 }
-
 a {
     text-decoration: none;
     cursor: pointer;
@@ -25,12 +24,28 @@ a {
 li {
     list-style: none;
 }
-
+img{
+    width:100%;
+}
 body {
     background: #050520;
-    min-height: 100vh;
 }
+h1{
+    font-family: Urbanist;
+    font-size: 2.4vw;
+    font-weight: 700;
+    color: #fff;
 
+}
+h2{
+    font-family: Urbanist;
+    font-size: 1.8vw;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    text-align: center;
+    color: #F3FEFF;
+
+}
 .btn {
     padding: .8vw 1.5vw;
     background: #9352FC;
@@ -42,11 +57,63 @@ body {
     font-size: 1.2vw;
     box-shadow: 0 .2vw 1vw #47139B;
 }
-
 .btn img {
     width: 1.9vw;
 }
-
+.btn-1{
+    background: #FFFFFF1A;
+    padding: 1vw 2vw;
+    font-family: Urbanist;
+    font-size: 0.8vw;
+    font-weight: 500;
+    border-radius: 9px;
+    color: #fff;
+    transition: all .2s;
+}
+.btn-1:hover{
+    background: #fff;
+    color: #000;
+}
+.btn-2{
+    background: linear-gradient(177.23deg, #9C2CF3 -13.49%, #3A6FF9 109.75%);
+    padding: 1vw 2vw;
+    font-family: Urbanist;
+    font-size: 0.8vw;
+    font-weight: 500;
+    border-radius: 8px;
+    letter-spacing: -0.01em;
+    color: #fff;
+    box-shadow: 0vw .3vw 1.5vw #000;
+    border-radius: 8px;
+}
+.btn-2:hover{
+   animation: up-down 2s linear infinite alternate;
+}
+.btn-3{
+    padding: 0.7vw 2vw;
+    font-family: Urbanist;
+    font-size: 0.7vw;
+    border-radius: 8px;
+    color: #fff;
+    font-weight: 500;
+    line-height: 13.75px;
+    letter-spacing: -0.01em;
+    text-align: center;
+    background: linear-gradient(176.91deg, #F32CD3 -13.15%, #4712DC 132.62%);
+    box-shadow: 0vw .3vw 1.5vw #000;
+    transition: all .3s;
+}
+.btn-3:hover{
+    box-shadow: 0vw .3vw 1.5vw #fff;
+ }
+@keyframes up-down {
+    0%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(-10px);
+    }
+}
 /*--------- navbar ----------
 ----------*/
 
@@ -74,13 +141,335 @@ nav .logo img {
     display: flex;
     justify-content: space-between;
     padding: 2vw 5vw;
+    position: relative;
 }
-
-.hero img {
+.hero .hero-bg{
+    position: absolute;
+    width: 100vw;
+    top: -10vw;
+    right: 0;
+    z-index: -1;
+}
+.hero  .star-1 {
+    position: absolute;
+    width: 1vw;
+    top: -3vw;
+    right: 35vw;
+    animation: scaling 2.5s linear infinite alternate;
+}
+.hero  .star-2 {
+    position: absolute;
+    width: 1vw;
+    top: 13vw;
+    right: 1vw;
+    animation: scaling 1.7s linear infinite alternate;
+}
+.hero  .star-3 {
+    position: absolute;
+    width: 1vw;
+    bottom: -5vw;
+    left: 7vw;
+    animation: scaling 2s linear infinite alternate;
+}
+@keyframes scaling {
+    0%{
+        transform: rotate(0deg) scale(0);
+        filter: brightness(0);
+    }
+    100%{
+        transform: rotate(360deg) scale(1);
+        filter: brightness(200%);
+    }
+}
+.hero .left,.hero .right {
     width: 49%;
+    display: flex;
+    align-items: center;
 }
+.hero .left div,.hero .right div{
+    width: 50%;
+    padding: 3vw;
+}
+.hero .right{
+    background: url(../images/right-bg.png)no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+}
+.hero img{
+    width: 20vw;
+    margin-left: -5vw;
+}
+.hero .left{
+    background: url(../images/hero-left-bg.png)no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+}
+.hero h1{
+    margin-bottom: 2vw;
+}
+/* ---------------neural--------
+----------- */
+.neural {
+    padding: 5vw 5vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    column-gap: 1vw;
+    row-gap: 2vw;
+    position: relative;
+}
+.neural .neural-box {
+    width: 49%;
+    background: linear-gradient(180deg, #8185A5 0%, rgba(129, 133, 165, 0) 100%);
+    padding: 1px;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all .1s;
+}
+.neural .neural-box:hover{
+    filter: brightness(140%);
+}
+.neural .neural-box .neural-box-inner{
+    width: 100%;
+    height: 100%;
+    box-shadow: 0px 43px 70px 0px #000000CC;
+    background: linear-gradient(90deg,#8185A5 0%,#8185A5 100%);
+    background: #141531;
+    padding: 3vw;
+    border-radius: 16px;
+}
+.neural .neural-box .neural-box-inner .btn-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.neural .neural-box .neural-box-inner .gradient-1{
+    margin-top: 1vw;
+    padding: 1px;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 47.73%, rgba(255, 255, 255, 0) 100%);
+}
+.neural .neural-box .neural-box-inner .gradient-1-inner{
+    background: linear-gradient(90deg, rgba(34, 24, 62, 0.13) 0%, #6820FF 50.46%, rgba(43, 29, 78, 0) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5vw;
 
+}
+.neural .neural-box .neural-box-inner .gradient-1 h5{
+    font-family: Urbanist;
+    font-size: 1vw;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    color: #FF23F6;
+    padding: 0.3vw 0;
+    position: relative;
+}
+.neural .neural-box .neural-box-inner .gradient-1 h5:nth-child(1)::after {
+    position: absolute;
+    content:'' ;
+    width: 1px;
+    height: 100%;
+    background: #fff;
+    top: 0;
+    right: -2vw;
+}
+.neural .neural-box .neural-box-inner  form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5vw;
+    margin-top: 2vw;
+}
+.neural .neural-box .neural-box-inner  form label {
+    font-family: Urbanist;
+    font-size: 0.8vw;
+    font-weight: 400;
+    line-height: 12.12px;
+    letter-spacing: 0.01em;
+    text-align: left;
+    color: #F3FEFF;
+}
+.neural .neural-box .neural-box-inner  form input{
+    border: 1px solid #6359E9;
+    padding: 0.5vw 0;
+    font-family: Urbanist;
+    font-size: 0.7vw;
+    font-weight: 400;
+    border-radius: 9px;
+    background: transparent;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.7);
+}
+.neural .neural-box .neural-box-inner  form .location {
+    width: 4vw;
+}
+.neural .neural-box .neural-box-inner  form .port {
+    width: 4.5vw;
+}
+.neural .neural-box .neural-box-inner  form .pph {
+    width: 2vw;
+}
+.neural .neural-box .neural-box-inner  form .spg {
+    width: 3vw;
+}
+.graphic-cards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1vw;
+    margin-top: 1vw;
+}
+.graphic-cards h6{
+    padding: 0.6vw 1.5vw;
+    border-radius: 9px;
+    font-family: Urbanist;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 10.1px;
+    color: #9C4FFF;
+    background: #101024;
+}
+.supply {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2vw;
+}
+.supply .supply-box {
+    width: 22%;
+    padding-left: 2vw;
+    position: relative;
+}
+.supply .supply-box  h6{
+    font-family: Urbanist;
+    font-size: 1vw;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    color: #F3FEFF;
+    margin-bottom: 0.3vw;
+}
+.supply .supply-box p{
+    font-family: Urbanist;
+    font-size: 0.8vw;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    color: #F3FEFF;
+}
+.supply .supply-box:not(:last-child)::after {
+    content: url(../images/Line.png);
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    right:0.7vw;
+    top: -0.5vw;
+}
+/* --------------countries---------
+---- */
+.countries {
+    padding: 5vw;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5vw;
+    position: relative;
+}
+.countries-bg{
+    position: absolute;
+    bottom: 0;
+    left: 15%;
+    width: 70%;
+    z-index: -1;
+}
+.countries-box {
+    width: 32%;
+    background: linear-gradient(180deg, #8185A5 0%, rgba(129, 133, 165, 0) 100%);
+    padding: 1px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+.countries-box-inner{
+    width: 100%;
+    height: 100%;
+    box-shadow: 0px 43px 70px 0px #000000CC;
+   backdrop-filter: blur(50px);
 
+    background: #141531;
+    padding: 2vw;
+    border-radius: 16px;
+    display: flex;
+    gap: 1vw;
+}
+.countries-box-inner:hover{
+    filter: brightness(140%);
+}
+.countries-box-inner .left{
+width: 18%;
+}
+.countries-box-inner .right {
+    width: 80%;
+}
+.countries-box-inner .right form{
+    display: flex;
+    align-items: center;
+    gap: 0.4vw;
+    margin-top: 1vw;
+}
+.countries-box-inner .right h2{
+    text-align: left;
+}
+.countries-box-inner .right .btn-group {
+    display: flex;
+    align-items: center;
+    gap: 2vw;
+    padding-top: 2vw;
+}
+.countries-box-inner .right .btn-group span {
+    font-family: Urbanist;
+    font-size: 0.7vw;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    color: #01E1FF;
+
+}
+  
+.countries-box-inner .right h6{
+    display: flex;
+    align-items: center;
+    gap: 0.4vw;
+    font-family: Urbanist;
+    font-size: 0.9vw;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.7);
+}
+.countries-box-inner .right h6 img{
+    width: 1vw;
+}
+.countries-box-inner .right form input{
+    border: 1px solid #6359E9;
+    padding: 0.5vw 1vw;
+    display: inline;
+    font-family: Urbanist;
+    font-size: 0.7vw;
+    font-weight: 400;
+    border-radius: 9px;
+    background: transparent;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.7);
+} 
+.countries-box-inner .right form .http {
+    width: 4vw;
+}
+.countries-box-inner .right form .transparent {
+    width: 6vw;
+}
+.countries-box-inner .right form .value {
+    width: 4vw;
+}
+.countries-box-inner .left img{
+    width: 100%;
+}
     /*--------- Website Responsive ----------
 ----------*/
 
