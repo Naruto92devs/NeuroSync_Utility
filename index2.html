@@ -5,6 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/index.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -13,38 +14,46 @@
     <script type="text/javascript" src="assets/javascript/script.js" defer></script>
 </head>
 <body>
+<div style="overflow: hidden;">
     <nav>
         <a href="#" class="logo">
             <img src="assets/images/logo.png" alt="">
         </a>
-        <a href="#" class="btn">
-            <img src="assets/images/meta-logo.png" alt="">
-            Connect Wallet
-        </a>
+        <div>
+            <a href="#" class="btn">
+                <img src="assets/images/meta-logo.png" alt="">
+                Connect Wallet
+            </a>
+            <a href="#" class="btn">
+                staking
+            </a>
+        </div>
     </nav>
     <section class="hero">
         <img src="assets/images/hero-bg.png" alt="" class="hero-bg">
         <img src="assets/images/star-1.png" alt="" class="star-1">
         <img src="assets/images/star-2.png" alt="" class="star-2">
         <img src="assets/images/star-3.png" alt="" class="star-3">
-        <div class="left">
-            <div class="left-box">
-                 <h1>NeuroSync<br>VPS</h1>
-                 <a href="#" class="btn-3">Learn More</a>
+        <a href="index.html">
+            <div class="left" id="div-1">
+                <div class="left-box">
+                     <h1>NeuroSync<br>VPS</h1>
+                     <a href="index.html" class="btn-3">Learn More</a>
+                </div>
+                <div class="right-box">
+                    <img src="assets/images/left-img.png" alt="">
+               </div>
             </div>
-            <div class="right-box">
-                <img src="assets/images/left-img.png" alt="">
-           </div>
-        </div>
-        <div class="right">
-            <div class="left-box">
-                <h1>NeuroSync<br>VPS</h1>
-                <a href="#" class="btn-3">Learn More</a>
-           </div>
-           <div class="right-box">
-               <img src="assets/images/right-img.png" alt="">
-          </div>
-        </div>
+        </a>
+            <div class="right" id="dive-2">
+                <div class="left-box">
+                    <h1>NeuroSync<br>GPU</h1>
+                    <a href="index2.html" class="btn-3">Learn More</a>
+               </div>
+               <div class="right-box">
+                   <img src="assets/images/right-img.png" alt="">
+              </div>
+            </div>
     </section>
     <section class="neural">
         <img src="assets/images/countries-bg.png" alt="" class="countries-bg">
@@ -247,5 +256,6 @@
             </div>
         </div>
     </section>
+</div>
 </body>
 </html>
